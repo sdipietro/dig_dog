@@ -38,23 +38,34 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <div class="form-title">{this.props.formType}</div>
+                    <div className="form-title">{this.props.formType}</div>
                     {/* <br /> */}
                     {/* Please {this.props.formType} or {this.props.navLink} */}
-                    <div className="form-header">
+                    {/* <div className="form-header">
                         <a href="#/signup">Sign Up</a>
                         <a href="#/login">Log in</a>
-                    </div>
+                    </div> */}
                     <div className="login-form">
                         {/* <br /> */}
-                        <label>
-                            <input type="email"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                                placeholder="Email"
-                            />
-                        </label>
+                        {this.props.formType === "Sign up" ?
+                            (<>
+                            <div className="form-header-signup">
+                                <a href="#/signup">Sign Up</a>
+                                <a href="#/login">Log in</a>
+                            </div>
+                            <label>
+                                <input type="email"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="login-input"
+                                    placeholder="Email"
+                                />
+                            </label>
+                            </>) : 
+                            (<div className="form-header-login">
+                                <a href="#/signup">Sign Up</a>
+                                <a href="#/login">Log in</a>
+                            </div>)}
                         <label>
                         <input type="text"
                                 value={this.state.username}

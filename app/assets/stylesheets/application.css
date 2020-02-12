@@ -60,7 +60,7 @@
 
  .form-title {
     font-family: 'proxima-nova', sans-serif;
-    font-size: 33px;
+    font-size: 30px;
     height: 33px;
     line-height: 33px;
     text-align: center;
@@ -68,7 +68,7 @@
     margin: 0 auto 60px;
  }
 
- .form-header {
+ .form-header-signup, .form-header-login {
     position: relative;
     box-sizing: border-box;
     display: block;
@@ -78,7 +78,7 @@
     -webkit-box-direction: normal;
  }
 
- .form-header a {
+ .form-header-signup a, .form-header-login a {
     height: 40.5px;
     border-bottom: 1px solid rgba(22, 24, 35, 0.2);
     font-family: sofia-pro, sans-serif;
@@ -94,14 +94,27 @@
     text-decoration: none;
     padding: none;
     margin: none;
-    top: 50%
+    top: 50%;
+    box-sizing: border-box;
+    padding-top: 10px;
+ }
+
+ .form-header-signup a:first-of-type {
+    border-bottom: 1px solid black;
+    color: black;
+ }
+
+ .form-header-login a:last-of-type {
+    border-bottom: 1px solid black;
+    color: black;
  }
 
  .login-form-container {
    display: flex;
    justify-content: center;
-   margin-top: 100px;
-   padding-bottom: 280px;
+   margin-top: 50px;
+   margin-bottom: 280px;
+   /* min-height: 480px; */
  }
 
  .login-form {
