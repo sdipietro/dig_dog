@@ -27,9 +27,11 @@
      box-sizing: border-box;
  }
 
- .logo {
+ .logo1 {
    font-family: sofia-pro, sans-serif;
    padding-left: 20px;
+   text-decoration: none;
+   color: black;
  }
 
  header {
@@ -49,13 +51,59 @@
     /* border-bottom: 1px solid lightgray; */
  }
 
- .login-button, .signup-button {
-     padding: 10px;
-     border-radius: 10px;
+ .login-button {
+     padding: 5px 10px;
+     border-radius: 2px;
+     border: 1px solid#fe2c55;
+     color: #fe2c55;
+     background-color: white;
+     text-decoration: none;
+     margin-right: 10px;
+     font-family: sofia-pro, sans-serif;
+     font-style: normal;
+     font-size: 13px;
+     font-weight: 500;
  }
 
- .login-button:hover, .signup-button:hover {
-     background-color: lightgray;
+ .signup-button {
+     padding: 5px 10px;
+     border-radius: 2px;
+     border: 1px solid#fe2c55;
+     color: white;
+     background-color: #fe2c55;
+     text-decoration: none;
+     font-family: sofia-pro, sans-serif;
+     font-style: normal;
+     font-size: 13px;
+     font-weight: 500;
+ }
+
+ .logout-button {
+   padding: 5px 10px;
+   border-radius: 2px;
+   border: 1px solid#fe2c55;
+   color: white;
+   background-color: #fe2c55;
+   text-decoration: none;
+   font-family: sofia-pro, sans-serif;
+   font-style: normal;
+   font-size: 13px;
+   font-weight: 500;
+   cursor: pointer;
+   margin-left: 10px;
+ }
+
+ .greeting {
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    box-sizing: border-box;
+ }
+
+ .greeting-user-profile {
+    line-height: 10px;
  }
 
  .form-title {
@@ -83,7 +131,6 @@
     border-bottom: 1px solid rgba(22, 24, 35, 0.2);
     font-family: sofia-pro, sans-serif;
     font-style: normal;
-    font-weight: 100;
     width: 100%;
     overflow: auto;
     font-size: 15px;
@@ -173,6 +220,10 @@
 
  .login-input::placeholder {
   color: gainsboro;
+ }
+
+ .copywright {
+    color: white;
  }
 
  footer {

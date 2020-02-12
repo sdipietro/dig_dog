@@ -5,13 +5,13 @@ const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
             <Link to="/login" className="login-button">Login</Link>
-            <Link to="/signup" className="signup-button">Sign up!</Link>
+            <Link to="/signup" className="signup-button">Signup</Link>
         </nav>
     );
 
     const personalGreeting = () => (
         <div className="greeting">
-            <h2>Hello, {currentUser.username}!</h2>
+            <p className="greeting-user-profile">&#128100; {currentUser.username}'s Profile</p>
             <button className="logout-button" onClick={logout}>Log Out</button>
         </div>
     );

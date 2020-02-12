@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
+    # user = User.where(username: username_or_email).or(User.where(email: username_or_email)).first
     return nil unless user
     user.is_password?(password) ? user : nil
   end

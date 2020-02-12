@@ -5,7 +5,8 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            email: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -21,6 +22,12 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
+
+    // handleDemoUser(e) {
+    //     e.preventDefault();
+    //     const user = Object.assign({}, this.state);
+    //     this.props.processForm(user);
+    // }
 
     renderErrors() {
         return (
@@ -39,14 +46,7 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="form-title">{this.props.formType}</div>
-                    {/* <br /> */}
-                    {/* Please {this.props.formType} or {this.props.navLink} */}
-                    {/* <div className="form-header">
-                        <a href="#/signup">Sign Up</a>
-                        <a href="#/login">Log in</a>
-                    </div> */}
                     <div className="login-form">
-                        {/* <br /> */}
                         {this.props.formType === "Sign up" ?
                             (<>
                             <div className="form-header-signup">
@@ -74,7 +74,6 @@ class SessionForm extends React.Component {
                                 placeholder="Username"
                             />
                         </label>
-                        {/* <br /> */}
                         <label>
                             <input type="password"
                                 value={this.state.password}
@@ -83,7 +82,6 @@ class SessionForm extends React.Component {
                                 placeholder="Password"
                             />
                         </label>
-                        {/* <br /> */}
                         {this.renderErrors()}
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
