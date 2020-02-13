@@ -1,24 +1,4 @@
-# README
+# DigDog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DigDog, inspired by TikTok, is a social media platform that allows users to post and view short-form videos of their favorite furry friends!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
