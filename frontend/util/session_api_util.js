@@ -1,22 +1,30 @@
 export const signup = user => (
     $.ajax({
-        method: 'POST',
         url: '/api/user',
+        method: 'POST',
         data: { user }
     })
 );
 
 export const login = user => (
     $.ajax({
-        method: 'POST',
         url: '/api/session',
+        method: 'POST',
         data: { user }
     })
 );
 
 export const logout = () => (
     $.ajax({
-        method: 'DELETE',
-        url: '/api/session'
+        url: '/api/session',
+        method: 'DELETE'
+    })
+);
+
+export const demoLogin = () => (
+    $.ajax({
+        url: '/api/session',
+        method: 'POST',
+        data: { user: { username: 'Demo User', password: 'demopassword', email: 'demo@dig-dog.com' }}
     })
 );

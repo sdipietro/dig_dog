@@ -65,6 +65,25 @@
      font-weight: 500;
  }
 
+ .demo-user-button {
+    color: rgba(22, 24, 35, 0.3);
+    font-weight: 500;
+    font-size: 12px;
+    background-color: rgba(22, 24, 35, 0.06);
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+ }
+
  .signup-button {
      padding: 5px 10px;
      border-radius: 2px;
