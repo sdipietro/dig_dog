@@ -1,4 +1,5 @@
 import React from 'react';
+// import {Link} from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -30,10 +31,7 @@ class SessionForm extends React.Component {
 
     handleDemoUser(e) {
         e.preventDefault();
-        // debugger
-        // const user = {username: 'stevedip1', password: '12345678', email: 'stevedip1@aol.com'}
         this.props.demoLogin();
-        // debugger
     }
 
     renderErrors() {
