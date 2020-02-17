@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoIndexItem from './video_index_item';
+import VideoIndexItem from '../videos/video_index_item';
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -7,7 +7,6 @@ class VideoIndex extends React.Component {
     };
 
     componentDidMount() {
-        // debugger
         this.props.requestVideos();
         // .then (
         //     document.getElementById('xyz').play()
@@ -20,16 +19,18 @@ class VideoIndex extends React.Component {
         });
 
         return (
-            <div className="feed-page-body">
-                <div className="outer-feed">
-                    <h1 className="trending-header">Trending</h1>
-                    <p className="trending-description">Watch the latest videos from out community</p>
-                    <div className="feed" > {videos} </div >
+            <div>
+                <div className="splash-page-body">
+                    <p className="splash-title">Make Your Day</p>
+                    <p className="splash-description">Real Pups. Real Videos.</p>
+                    <div className="video-banner-container">
+                        <div className="video-banner"> {videos} </div >
+                    </div>
                     <br className="end-of-feed" />
                 </div>
-                <aside>
-
-                </aside>
+                <footer className="splash-page-footer">
+                    
+                </footer>
             </div>
         );
     }

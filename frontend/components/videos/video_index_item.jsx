@@ -8,7 +8,7 @@ class VideoIndexItem extends React.Component {
     render() {
         return (
             <div className="video-feed-item">
-                <video controls autoPlay className="videoUrl" src={this.props.video.videoUrl} />
+                <video loop className="video" autoPlay controls src={this.props.video.videoUrl} />
             </div>
         )
     }

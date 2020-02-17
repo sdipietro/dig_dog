@@ -1,5 +1,6 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -48,50 +49,58 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <div className="form-title">{this.props.formType}</div>
-                    <div className="login-form">
-                        {this.props.formType === "Sign up" ?
-                            (<>
-                            <div className="form-header-signup">
-                                <a href="#/signup">Sign Up</a>
-                                <a href="#/login">Log in</a>
-                            </div>
+            <div>
+                <header className="form-page-header">
+                    <h1 className="logo">
+                        <Link to="/" className="logo">DigDog</Link>
+                    </h1>
+                </header>
+                
+                <div className="login-form-container">
+                    <form onSubmit={this.handleSubmit} className="login-form-box">
+                        <div className="form-title">{this.props.formType}</div>
+                        <div className="login-form">
+                            {this.props.formType === "Sign up" ?
+                                (<>
+                                <div className="form-header-signup">
+                                    <a href="#/signup">Sign Up</a>
+                                    <a href="#/login">Log in</a>
+                                </div>
+                                <label>
+                                    <input type="email"
+                                        value={this.state.email}
+                                        onChange={this.update('email')}
+                                        className="login-input"
+                                        placeholder="Email"
+                                    />
+                                </label>
+                                </>) : 
+                                (<div className="form-header-login">
+                                    <a href="#/signup">Sign Up</a>
+                                    <a href="#/login">Log in</a>
+                                </div>)}
                             <label>
-                                <input type="email"
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
+                            <input type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
                                     className="login-input"
-                                    placeholder="Email"
+                                    placeholder="Username"
                                 />
                             </label>
-                            </>) : 
-                            (<div className="form-header-login">
-                                <a href="#/signup">Sign Up</a>
-                                <a href="#/login">Log in</a>
-                            </div>)}
-                        <label>
-                        <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="login-input"
-                                placeholder="Username"
-                            />
-                        </label>
-                        <label>
-                            <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                                placeholder="Password"
-                            />
-                        </label>
-                        {this.renderErrors()}
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                        <button className="demo-user-button" onClick={this.handleDemoUser}>Sign in as Demo User</button>
-                    </div>
-                </form>
+                            <label>
+                                <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="login-input"
+                                    placeholder="Password"
+                                />
+                            </label>
+                            {this.renderErrors()}
+                            <input className="session-submit" type="submit" value={this.props.formType} />
+                            <button className="demo-user-button" onClick={this.handleDemoUser}>Sign in as Demo User</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import VideoIndexContainer from '../videos/video_index_container';
+import SplashContainer from '../splash/splash_container';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
@@ -16,7 +18,33 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
     );
 
-    return currentUser ? personalGreeting() : sessionLinks();
+    if (currentUser) {
+        return (
+            <div>
+                <header className="page-header">
+                    <h1 className="logo">
+                        <Link to="/" className="logo">DigDog</Link>
+                    </h1>
+
+                    { personalGreeting() }
+                </header>
+                <VideoIndexContainer />
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <header className="page-header">
+                    <h1 className="logo">
+                        <Link to="/" className="logo">DigDog</Link>
+                    </h1>
+
+                    {sessionLinks()}
+                </header>
+                <SplashContainer />
+            </div>
+        )
+    }
 };
 
 

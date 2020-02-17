@@ -27,6 +27,14 @@ seed_vid_3 = Video.create!({description: "Doggo in stairs", creator_id: test_use
 attached_file_3 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggo_in_stairs.mp4')
 seed_vid_3.video.attach(io: attached_file_3, filename: 'doggo_in_stairs.mp4')
 
-seed_vid_4 = Video.create!({description: "Doggy with horse", creator_id: test_user.id })
-attached_file_4 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggy_with_horse.mp4')
-seed_vid_4.video.attach(io: attached_file_4, filename: 'doggy_with_horse.mp4')
+seed_vid_4 = Video.create!({description: "Snoot challenge", creator_id: test_user.id })
+attached_file_4 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/snoot_challenege.mp4')
+seed_vid_4.video.attach(io: attached_file_4, filename: 'snoot_challenege.mp4')
+
+seed_vid_5 = Video.create!({description: "Pup eating foot", creator_id: test_user.id })
+attached_file_5 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/pup_eating_foot.mp4')
+seed_vid_5.video.attach(io: attached_file_5, filename: 'pup_eating_foot.mp4')
+
+seed_vid_6 = Video.create!({description: "Doggy with horse", creator_id: test_user.id })
+attached_file_6 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggy_with_horse.mp4')
+seed_vid_6.video.attach(io: attached_file_6, filename: 'doggy_with_horse.mp4')
