@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoIndexItemContainer from './video_index_item_container';
+import VideoIndexItem from './video_index_item';
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -11,15 +11,12 @@ class VideoIndex extends React.Component {
     };
 
     render() {
-        const videos = Object.values(this.props.videos);
-
-        return (
-            <div className="feed">
-                {videos.map((video, idx) => {
-                    return <VideoIndexItemContainer key={idx} video={video} />;
-                })}
-            </div>
-        )
+        // debugger
+        const videos = this.props.videos.map((video, idx) => {
+            return <VideoIndexItem key={idx} video={video} />;
+        });
+        // debugger
+        return <div className="feed">{videos}</div>;
     }
 };
 

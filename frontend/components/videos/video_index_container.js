@@ -3,8 +3,9 @@ import { requestVideos } from '../../actions/video_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
+    // debugger
     return {
-        videos: state.entities.videos
+        videos: Object.values(state.entities.videos)
     }
 };
 

@@ -8,7 +8,7 @@ export const CLEAR_VIDEO_ERRORS = 'CLEAR_VIDEO_ERRORS';
 
 const receiveAllVideos = (videos) => {
     return {
-        type: RECEIVE_VIDEOS,
+        type: RECEIVE_ALL_VIDEOS,
         videos
     }
 };

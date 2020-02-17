@@ -2,7 +2,7 @@ import { RECEIVE_ALL_VIDEOS, RECEIVE_VIDEO, REMOVE_VIDEO } from '../actions/vide
 import { merge } from 'lodash';
 
 const videosReducer = (oldState = {}, action) => {
-    Object.freeze(state);
+    Object.freeze(oldState);
 
     let newState = merge({}, oldState);
 
@@ -16,7 +16,7 @@ const videosReducer = (oldState = {}, action) => {
             delete newState[action.videoId]
             return newState
         default:
-            return state
+            return oldState
     }
 }
 

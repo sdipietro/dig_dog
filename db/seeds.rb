@@ -6,4 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-demo_user = User.create(username: 'Demo User', password: 'demopassword', email: 'demo@dig-dog.com')
+require 'open-uri'
+
+Video.destroy_all
+User.destroy_all
+
+demo_user = User.create!(username: 'Demo User', password: 'demopassword', email: 'demo@dig-dog.com')
+
+test_user = User.create!({username: "test", password: "12345678", email: "test@gmail.com"})
+
+seed_vid_1 = Video.create!({description: "Doggo in pool", creator_id: test_user.id })
+attached_file_1 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/dog_in_pool.mp4')
+seed_vid_1.video.attach(io: attached_file_1, filename: 'dog_in_pool.mp4')
+
+seed_vid_2 = Video.create!({description: "Dog with cat", creator_id: test_user.id })
+attached_file_2 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/dog_with_cat.mp4')
+seed_vid_2.video.attach(io: attached_file_2, filename: 'dog_with_cat.mp4')
+
+seed_vid_3 = Video.create!({description: "Doggo in stairs", creator_id: test_user.id })
+attached_file_3 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggo_in_stairs.mp4')
+seed_vid_3.video.attach(io: attached_file_3, filename: 'doggo_in_stairs.mp4')
+
+seed_vid_4 = Video.create!({description: "Doggy with horse", creator_id: test_user.id })
+attached_file_4 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggy_with_horse.mp4')
+seed_vid_4.video.attach(io: attached_file_4, filename: 'doggy_with_horse.mp4')

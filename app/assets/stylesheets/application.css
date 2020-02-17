@@ -66,6 +66,20 @@
      font-weight: 500;
  }
 
+ .feed {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+ }
+
+ .video-feed-item {
+   /* display: block; */
+   /* float: left; */
+   width: 256px;
+   /* margin-right: 24px; */
+   /* margin-bottom: 24px; */
+ }
+
  .demo-user-button {
     color: rgba(22, 24, 35, 0.3);
     font-weight: 500;

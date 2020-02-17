@@ -4,7 +4,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
 import { Link, Route } from 'react-router-dom';
-import VideoIndex from './videos/video_index';
+import VideoIndexContainer from './videos/video_index_container';
 
 const App = () => (
     <div>
@@ -19,7 +19,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
 
-        <Route exact path="/videos" component={VideoIndex} />
+        <VideoIndexContainer />
 
         <footer>
             <p className="copyright">© 2020 DigDog</p>
