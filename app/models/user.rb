@@ -22,6 +22,18 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_one_attached :profile_photo, dependent: :destroy
+    
+  # has_many :authored_comments
+  # has_many :authored_likes
+  has_many :videos,
+    primary_key: :id,
+    foreign_key: :creator_id,
+    class_name: :Video,
+    dependent: :destroy
+  # has_many :followers
+  # has_many :followees
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     # user = User.where(username: username_or_email).or(User.where(email: username_or_email)).first

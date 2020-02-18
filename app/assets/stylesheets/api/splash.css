@@ -1,0 +1,37 @@
+.splash-page-body {
+    padding-top: 36px;
+    text-align: center;
+    display: block;
+ }
+
+ .splash-title {
+   font-family: sofiapro, PingFangSC, sans-serif;
+   font-weight: 700;
+   font-size: 72px;
+   line-height: 1;
+   padding-top: 10px;
+   margin-bottom: 0;
+ }
+
+ .splash-description {
+   font-family: "sofiapro-medium",PingFangSC,sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 32px;
+   margin-top: 3px;
+ }
+
+ .video-banner-container {
+  margin-top: 24px;
+  width: 100%;
+ }
+
+ .video-banner {
+  max-width: 100%;
+  display: flex;
+ }
+
+ .video-banner .video {
+  object-fit: cover;
+  max-width: 100%;
+ }

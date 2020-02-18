@@ -1,0 +1,31 @@
+.demo-user-button {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #fe2c55;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+ }
+
+ .signup-button {
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid#fe2c55;
+    color: white;
+    background-color: #fe2c55;
+    text-decoration: none;
+    font-family: sofia-pro, sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+ }
