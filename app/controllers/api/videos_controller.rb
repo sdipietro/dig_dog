@@ -13,7 +13,7 @@ class Api::VideosController < ApplicationController
     @video = Video.new(video_params)
     @video.creator_id = current_user.id
 
-    if @video.update(post_params)
+    if @video.update(video_params)
       render :show
     else
       render json: @video.errors.full_messages, status: 422
