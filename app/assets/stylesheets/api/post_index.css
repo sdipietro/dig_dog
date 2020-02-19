@@ -77,3 +77,12 @@
  .greeting-user-profile {
    line-height: 10px;
  }
+
+ .video-index-footer {
+  height: 84px;
+  background-color: #000;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+ }

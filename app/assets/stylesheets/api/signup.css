@@ -29,3 +29,13 @@
     font-size: 13px;
     font-weight: 500;
  }
+
+ .session-form-footer {
+   height: 84px;
+   background-color: #000;
+   position: fixed;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin-bottom: 0px;
+ }

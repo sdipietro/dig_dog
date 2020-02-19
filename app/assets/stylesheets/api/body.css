@@ -42,13 +42,3 @@ body {
    right: 11%;
    font-family: sofiapro, PingFangSC, sans-serif;
  }
-
- footer {
-   height: 84px;
-   background-color: #000;
-   position: fixed;
-   bottom: 0px;
-   left: 0px;
-   right: 0px;
-   margin-bottom: 0px;
- }

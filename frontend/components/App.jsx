@@ -15,10 +15,6 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
 
         </Switch>
-
-        <footer>
-            <p className="copyright">© 2020 DigDog</p>
-        </footer>
     </div>
 );
 
