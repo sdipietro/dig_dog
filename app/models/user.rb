@@ -26,13 +26,34 @@ class User < ApplicationRecord
     
   has_many :authored_comments
   has_many :authored_likes
+
   has_many :videos,
     primary_key: :id,
     foreign_key: :creator_id,
     class_name: :Video,
     dependent: :destroy
-  has_many :followers
-  has_many :followees
+
+  has_many :follower_relationships,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: :Follow,
+    dependent: :destroy
+
+  has_many :followee_relationships,
+    primary_key: :id,
+    foreign_key: :followee_id,
+    class_name: :Follow,
+    dependent: :destroy
+
+  has_many :followers,
+    through: :follower_relationships,
+    source: :follower,
+    dependent: :destroy
+
+  has_many :followees,
+    through: :followee_relationships,
+    source: :followee,
+    dependent: :destroy
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

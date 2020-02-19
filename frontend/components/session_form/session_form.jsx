@@ -35,6 +35,12 @@ class SessionForm extends React.Component {
         this.props.demoLogin();
     }
 
+    // handleFilled() {
+    //     if (this.state.username != '' && this.state.password != '' && this.state.email != '') {
+            
+    //     }
+    // }
+
     renderErrors() {
         return (
             <div className="error-messages">
@@ -91,6 +97,7 @@ class SessionForm extends React.Component {
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
+                                    // onChange={e => { this.update('username'); this.handleFilled() }}
                                     className="login-input"
                                     placeholder="Password"
                                 />
