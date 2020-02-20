@@ -59,6 +59,7 @@ class VideoIndex extends React.Component {
                     </div>
                     <div className="splash-footer-middle">
                         <div className="splash-footer-logo">
+                            <img className="dig-dog-white" src={window.digDogWhiteSymbol} alt="DigDog" />
                             <h1 className="footer-logo">DigDog</h1>
                         </div>
                         <div className="footer-content-column">

@@ -233,7 +233,7 @@
 }
 
 .splash-footer-logo {
-  display: block;
+  display: flex;
   position: absolute;
   left: 144px;
   top: 43px;
@@ -241,6 +241,12 @@
   text-decoration: none;
   font-size: 20px;
 }
+
+.dig-dog-white {
+  width: 45px;
+  height: 45px;
+  margin-top: 23px;
+ }
 
 .footer-content-column {
   flex: 1 1 0%;

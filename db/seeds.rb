@@ -44,10 +44,6 @@ demo_user = User.create!(username: 'demouser', password: 'demopassword', email: 
     demo_user_pic = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/demo_photo.jpg')
     demo_user.profile_photo.attach(io: demo_user_pic, filename: 'demo_photo.jpg')
 
-seed_vid_1 = Video.create!({description: "Doggo in pool", creator_id: user_1.id, view_count: 124 })
-    attached_file_1 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/dog_in_pool.mp4')
-    seed_vid_1.video.attach(io: attached_file_1, filename: 'dog_in_pool.mp4')
-
 seed_vid_2 = Video.create!({description: "Dog with cat", creator_id: user_2.id, view_count: 33 })
     attached_file_2 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/dog_with_cat.mp4')
     seed_vid_2.video.attach(io: attached_file_2, filename: 'dog_with_cat.mp4')
@@ -63,6 +59,10 @@ seed_vid_4 = Video.create!({description: "Snoot challenge", creator_id: user_4.i
 seed_vid_5 = Video.create!({description: "Pup eating foot", creator_id: user_5.id, view_count: 206 })
     attached_file_5 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/pup_eating_foot.mp4')
     seed_vid_5.video.attach(io: attached_file_5, filename: 'pup_eating_foot.mp4')
+
+seed_vid_1 = Video.create!({description: "Doggo in pool", creator_id: user_1.id, view_count: 124 })
+    attached_file_1 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/dog_in_pool.mp4')
+    seed_vid_1.video.attach(io: attached_file_1, filename: 'dog_in_pool.mp4')
 
 seed_vid_6 = Video.create!({description: "Doggy with horse", creator_id: user_6.id, view_count: 38 })
     attached_file_6 = open('https://dig-dog-seeds.s3.us-east-2.amazonaws.com/doggy_with_horse.mp4')

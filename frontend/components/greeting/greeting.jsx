@@ -21,11 +21,14 @@ const Greeting = ({ currentUser, logout }) => {
 
     if (currentUser) {
         return (
-            <div>
+            <div className="index-page">
                 <header className="page-header">
-                    <h1 className="logo">
-                        <Link to="/" className="logo">DigDog</Link>
-                    </h1>
+                    <div>
+                        <Link to="/" className="logo">
+                            <img className="dig-dog" src={window.digDogSymbol} alt="DigDog" />
+                            <h1 className="">DigDog</h1>
+                        </Link>
+                    </div>
                     
                     { personalGreeting() }
                 </header>
@@ -36,9 +39,12 @@ const Greeting = ({ currentUser, logout }) => {
         return (
             <div>
                 <header className="page-header">
-                    <h1 className="logo">
-                        <Link to="/" className="logo">DigDog</Link>
-                    </h1>
+                    <div>
+                        <Link to="/" className="logo">
+                            <img className="dig-dog" src={window.digDogSymbol} alt="DigDog" />
+                            <h1 className="">DigDog</h1>
+                        </Link>
+                    </div>
 
                     {sessionLinks()}
                 </header>

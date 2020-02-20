@@ -57,9 +57,12 @@ class SessionForm extends React.Component {
         return (
             <div>
                 <header className="form-page-header">
-                    <h1 className="logo">
-                        <Link to="/" className="logo">DigDog</Link>
-                    </h1>
+                    <div>
+                        <Link to="/" className="logo">
+                            <img className="dig-dog" src={window.digDogSymbol} alt="DigDog" />
+                            <h1 className="">DigDog</h1>
+                        </Link>
+                    </div>
                 </header>
                 
                 <div className="login-form-container">
@@ -108,8 +111,18 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
                 </div>
-                <footer className="session-form-footer">
+                {/* <footer className="session-form-footer">
                     <p className="copyright">© 2020 DigDog</p>
+                </footer> */}
+                <footer className="session-form-footer">
+                    <div className="session-footer-bottom">
+                        <div className="language-selector-box">
+                            <p>English</p>
+                        </div>
+                        <div>
+                            <p className="session-copyright">© 2020 DigDog</p>
+                        </div>
+                    </div>
                 </footer>
             </div>
         );
