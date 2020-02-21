@@ -15,7 +15,18 @@ class VideoIndex extends React.Component {
 
     render() {
         const videos = this.props.videos.map((video, idx) => {
-            return <VideoIndexItem key={idx} video={video} />;
+            // return <VideoIndexItem key={idx} video={video} />
+            return (
+            <div className="video-feed-item" key={idx} video={video}>
+                <video
+                    loop
+                    className="video"
+                    autoPlay
+                    muted
+                    src={video.videoUrl}
+                    value={video.id} />
+            </div>
+            )
         });
 
         return (

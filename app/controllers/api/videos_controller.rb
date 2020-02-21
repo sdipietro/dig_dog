@@ -14,7 +14,8 @@ class Api::VideosController < ApplicationController
 
   def create
     @video = Video.new(video_params)
-    @video.creator_id = current_user.id
+    @video.view_count = 0
+    # @video.creator_id = current_user.id
 
     if @video.save
       render :show

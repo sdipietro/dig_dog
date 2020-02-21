@@ -37,7 +37,7 @@
 
  .trending-header {
    font-family: sofia-pro, sans-serif;
-   font-weight: 700;
+   font-weight: 600;
    font-size: 57px;
    line-height: 1;
    margin-bottom: 6px;
@@ -46,7 +46,7 @@
 
  .trending-description {
   font-family: 'proxima-nova', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 24px;
   color: #8a8b91;
@@ -70,22 +70,25 @@
    object-fit: cover;
    margin-right: 24px;
    margin-bottom: 24px;
+   cursor: pointer;
  }
 
  .logout-button {
-   padding: 5px 10px;
-   border-radius: 2px;
-   border: 1px solid#fe2c55;
-   color: white;
-   background-color: #fe2c55;
-   text-decoration: none;
-   font-family: sofia-pro, sans-serif;
-   font-style: normal;
-   font-size: 13px;
-   font-weight: 500;
-   cursor: pointer;
-   margin-left: 10px;
-   width: 100px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid#fe2c55;
+  color: white;
+  background-color: #fe2c55;
+  text-decoration: none;
+  font-family: sofia-pro, sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 30px;
+  margin-top: 10px;
+   /* margin-left: 10px; */
+   /* width: 80px; */
  }
 
  .greeting {
@@ -93,9 +96,9 @@
     font-size: 12px;
     justify-content: space-evenly;
     text-align: center;
-    height: 30px;
+    /* height: 30px; */
     box-sizing: border-box;
-    width: 205.42px;
+    width: 250px;
  }
 
  .greeting-user-profile {
@@ -177,7 +180,7 @@
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 272px;
+  height: 296px;
 
  }
 

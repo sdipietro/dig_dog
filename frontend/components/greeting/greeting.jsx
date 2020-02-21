@@ -13,9 +13,13 @@ const Greeting = ({ currentUser, logout }) => {
 
     const personalGreeting = () => (
         <div className="greeting">
-            {/* <p className="greeting-user-profile">&#128100; {currentUser.username}'s Profile</p> */}
+            <Link to={`/users/${currentUser.id}`} > 
+                <img src={currentUser.profilePhotoUrl} className="current-user-photo" />
+            </Link>
             <button className="logout-button" onClick={logout}>Log Out</button>
-            <img className="upload-symbol" src={window.uploadSymbol} />
+            <Link to="/videos/new">
+                <img className="upload-symbol" src={window.uploadSymbol} />
+            </Link>
         </div>
     );
 
