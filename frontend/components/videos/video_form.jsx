@@ -71,7 +71,9 @@ export default class VideoForm extends React.Component {
                         <Link to={`/users/${this.props.currentUser.id}`} >
                             <img src={this.props.currentUser.profilePhotoUrl} className="current-user-photo" />
                         </Link>
-                        <button className="logout-button" onClick={this.props.logout}>Log Out</button>
+                        <Link to="/">
+                            <button className="logout-button" onClick={this.props.logout}>Log Out</button>
+                        </Link>
                         <Link to="/videos/new">
                             <img className="upload-symbol" src={window.uploadSymbol} />
                         </Link>

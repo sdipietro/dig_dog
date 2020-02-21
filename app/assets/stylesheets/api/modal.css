@@ -15,16 +15,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* .video-show-container {
-    min-height: 100%;
-    display: flex;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-} */
-
 .video-box {
     width: 822px;
     height: 692px;
@@ -38,7 +28,7 @@
 }
 
 .video-container {
-    width: 390px;
+    width: 450px;
     height: 100%;
 }
 
@@ -64,7 +54,7 @@
 
 .show-video {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   object-fit: cover;
 }

@@ -5,6 +5,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
 import VideoFormContainer from './videos/video_form_container';
+// import UserShowContainer from './users/user_show_container';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <ProtectedRoute exact path='/videos/new' component={VideoFormContainer} />
+            {/* <ProtectedRoute path='/users/:id' component={UserShowContainer} /> */}
 
         </Switch>
     </div>
