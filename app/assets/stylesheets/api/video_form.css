@@ -1,0 +1,278 @@
+.html {
+    box-sizing: border-box;
+}
+
+.video-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+    flex: 1 1;
+    box-sizing: inherit;
+}
+
+.video-form-title {
+    font-family: "sofiapro-bold", PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 1;
+    margin-top: 60px;
+    box-sizing: inherit;
+}
+
+.video-form-subtitle {
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #8a8b91;
+    margin-top: 2px;
+    box-sizing: inherit;
+}
+
+.video-form-body {
+    display: flex;
+    margin-top: 40px;
+    box-sizing: inherit;
+}
+
+.upload-container-outer {
+    box-sizing: inherit;
+}
+
+.upload-container-inner {
+    height: 100%;
+    box-sizing: inherit;
+}
+
+.upload-button {
+    cursor: pointer;
+    text-align: center;
+    box-sizing: inherit;
+}
+
+.upload-button-inner {
+    background: rgba(22, 24, 35, 0.03);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+    width: 306px;
+    height: 544px;
+    box-sizing: inherit;
+    position: relative;
+}
+
+.video-preview {
+    position: absolute;
+    object-fit: cover;
+}
+
+.upload-video-input {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.video-upload-symbol {
+    display: inline;
+    line-height: 0;
+    color: rgb(22, 24, 35);
+    opacity: 0.12;
+    width: 49px;
+    height: 36px;
+    box-sizing: inherit;
+}
+.main-upload-text {
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(22, 24, 35, 0.34);
+    margin-top: 29px;
+    box-sizing: inherit;
+}
+
+.sub-upload-text {
+    margin-top: 15px;
+    margin: 0;
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(22, 24, 35, 0.34);
+    text-align: left;
+    box-sizing: inherit;
+}
+
+.upload-type-list {
+    margin: 0;
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(22, 24, 35, 0.34);
+    text-align: left;
+    box-sizing: inherit;
+}
+
+.upload-type-list li {
+    display: list-item;
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(22, 24, 35, 0.34);
+    box-sizing: inherit;
+}
+
+.video-description-input-container {
+    margin-left: 60px;
+    margin-bottom: 500px;
+    box-sizing: inherit;
+}
+
+.video-description-input-container-inner {
+    outline-style: none;
+    position: relative;
+    width: 786px;
+    box-sizing: inherit;
+}
+
+.video-description-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: inherit;
+}
+
+.caption-title {
+    font-family: "sofiapro-bold", PingFangSC, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    box-sizing: inherit;
+}
+
+.caption-requirements {
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: rgba(22, 24, 35, 0.5);
+    white-space: pre;
+    box-sizing: inherit;
+}
+
+.video-description-input {
+    margin-top: 14px;
+    box-sizing: inherit;
+}
+
+.video-description-input-inner {
+    min-height: 44px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    box-sizing: inherit;
+}
+
+.description-editor {
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: text;
+    width: 100%;
+    position: relative;
+    padding: 0 80px 0 16px;
+    box-sizing: inherit;
+}
+
+.description-editor-innner {
+    position: relative;
+    height: inherit;
+    text-align: initial;
+    box-sizing: inherit;
+}
+
+.description-editor-innner-inner {
+    background-color: rgba(255, 255, 255, 0);
+    border-left: .1px solid transparent;
+    position: relative;
+    z-index: 1;
+    height: inherit;
+    text-align: initial;
+    box-sizing: inherit;
+}
+
+.innermost-description-editor {
+    outline: none;
+    user-select: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-style: none;
+    padding: 12px 0;
+    overflow: auto;
+    height: inherit;
+    text-align: initial;
+    direction: ltr;
+    text-align: left;
+    box-sizing: inherit;
+    width: 100%;
+}
+
+.video-submit-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+    box-sizing: inherit;
+}
+
+.cancel-button {
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #161823;
+    position: relative;
+    margin-right: 32px;
+    background-color: transparent;
+    box-sizing: inherit;
+    margin-top: 5px;
+}
+
+.video-upload-button {
+    background: rgba(22, 24, 35, 0.06);
+    color: rgba(22, 24, 35, 0.34);
+    font-family: "proxima-regular", PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #161823;
+    position: relative;
+    width: 164px;
+    height: 44px;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.bottom-form {
+    display: block;
+    box-sizing: inherit;
+}

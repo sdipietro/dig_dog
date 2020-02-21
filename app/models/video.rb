@@ -13,6 +13,8 @@
 class Video < ApplicationRecord
     validates :creator_id, :view_count, presence: true
 
+    validate :ensure_video
+
     has_one_attached :video
 
     belongs_to :user,
@@ -22,4 +24,10 @@ class Video < ApplicationRecord
 
     has_many :likes, as: :likeable
     has_many :comments
+
+    def ensure_video
+        unless self.video.attached?
+            errors[:session] << "Must be attached"
+        end
+    end
 end

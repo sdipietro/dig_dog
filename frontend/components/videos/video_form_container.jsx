@@ -1,17 +1,20 @@
 import VideoForm from './video_form';
 import { createVideo } from '../../actions/video_actions';
 import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        currentUser: state.session.id
+        currentUser: state.entities.users[state.session.id],
+        errors: state.errors.session
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createVideo: (post) => dispatch(createVideo(post))
+        createVideo: (video) => dispatch(createVideo(video)),
+        logout: () => dispatch(logout())
     }
 };
 
