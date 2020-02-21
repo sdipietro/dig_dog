@@ -63,7 +63,7 @@ class UserIndex extends React.Component {
                         <ul className="user-index" >
                             {this.props.users.map((user, idx) => {
                                 return <li className="user-item-container" key={idx}><UserIndexItem user={user} />
-                                    <a href={`/users/${user.id}`} className="user-item-link">
+                                    <Link to={`/users/${user.id}`} className="user-item-link">
                                         <div className="profile-pic-container">
                                             <img className="profile-pic" src={user.profilePhotoUrl}>
                                             </img>
@@ -75,7 +75,7 @@ class UserIndex extends React.Component {
                                         <div className="user-item-arrow">
                                             >
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>;
                             })}
                         </ul >
