@@ -61,7 +61,7 @@ class UserIndex extends React.Component {
                             <h3 className="suggested-header-title">Discover</h3>
                         </div>
                         <ul className="user-index" >
-                            {this.props.users.map((user, idx) => {
+                            {this.props.users.reverse().map((user, idx) => {
                                 return <li className="user-item-container" key={idx}><UserIndexItem user={user} />
                                     <Link to={`/users/${user.id}`} className="user-item-link">
                                         <div className="profile-pic-container">

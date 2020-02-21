@@ -24,8 +24,17 @@ class User < ApplicationRecord
 
   has_one_attached :profile_photo, dependent: :destroy
     
-  has_many :authored_comments
-  has_many :authored_likes
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Comment,
+    dependent: :destroy
+
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Like,
+    dependent: :destroy
 
   has_many :videos,
     primary_key: :id,
