@@ -48,7 +48,7 @@ class UserShow extends React.Component {
             <div className="index-page-outer">
                 <div>
                     <div className="feed-page-body">
-                        <div className="outer-feed">
+                        <div className="user-show-outer-feed">
                             <div className="user-profile">
                                 <div className="profile-header">
                                     <div className="profile-photo">
