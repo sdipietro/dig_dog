@@ -57,7 +57,7 @@ export default class VideoForm extends React.Component {
     };
 
     render() {
-        const preview = this.state.videoUrl ? <video loop muted autoPlay src={this.state.videoUrl}></video> : null;
+        const preview = this.state.videoUrl ? <video loop muted autoPlay src={this.state.videoUrl} className="video-preview"></video> : null;
         return (
             <div className="video-form-page">
                 <header className="page-header">
@@ -89,7 +89,7 @@ export default class VideoForm extends React.Component {
                             <div className="upload-container-inner">
                                 <div className="upload-button">
                                     <div className="upload-button-inner">
-                                        <div className="video-preview">
+                                        <div className="video-preview-container">
                                             {preview}
                                         </div>
                                         <input

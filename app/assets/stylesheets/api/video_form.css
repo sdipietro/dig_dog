@@ -65,9 +65,13 @@
     position: relative;
 }
 
-.video-preview {
+.video-preview-container {
     position: absolute;
     object-fit: cover;
+}
+
+.video-preview {
+    width: 306px;
 }
 
 .upload-video-input {
@@ -81,7 +85,7 @@
     display: inline;
     line-height: 0;
     color: rgb(22, 24, 35);
-    opacity: 0.12;
+    /* opacity: 0.12; */
     width: 49px;
     height: 36px;
     box-sizing: inherit;
@@ -153,7 +157,7 @@
 .caption-title {
     font-family: "sofiapro-bold", PingFangSC, sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1;
     box-sizing: inherit;
 }
